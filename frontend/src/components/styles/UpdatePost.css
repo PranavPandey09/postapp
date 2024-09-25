@@ -1,0 +1,66 @@
+/* UpdatePost.css */
+.update-post-container {
+  padding: 50px;
+  background-color: #ffffff; /* White background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-post-container h2 {
+  font-size: 2.5rem;
+  color: #6a1b9a; /* Purple color */
+  margin-bottom: 30px;
+}
+
+.update-post-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background-color: #f3e5f5; /* Light purple */
+  padding: 40px; /* Adjusted padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-post-form input,
+.update-post-form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 1rem; /* Normal font size */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.update-post-form input:focus,
+.update-post-form textarea:focus {
+  border-color: #6a1b9a; /* Purple border on focus */
+  outline: none;
+}
+
+.update-post-form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.update-post-form button {
+  padding: 15px;
+  background-color: #6a1b9a; /* Purple background */
+  color: #fff;
+  font-size: 1rem; /* Normal font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-post-form button:hover {
+  background-color: #8e24aa; /* Lighter purple on hover */
+}
+
+.update-post-form button:active {
+  background-color: #5e35b1; /* Darker purple on active */
+}

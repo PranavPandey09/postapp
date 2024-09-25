@@ -1,0 +1,142 @@
+/* Post Detail Page Styling */
+.post-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f3e5f5; /* Light background */
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Background animation */
+.post-detail-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50%, rgba(255, 255, 255, 0.05), transparent);
+  animation: rotate-background 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate-background {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card-Detail {
+  background-color: #e27def; /* Purple color */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(237, 234, 234, 0.5);
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.post-title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-size: 1rem;
+  color: #ffeb3b; /* Yellow for contrast */
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.post-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  text-align: left;
+}
+
+img {
+  border-radius: 8px;
+  margin-top: 20px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #ab47bc; /* Lighter purple */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #8e24aa; /* Darker purple */
+}
+
+/* Additional styles for the delete button to match the edit button */
+.delete-btn {
+  text-decoration: none;
+  background-color: #ab47bc; /* Same as edit button */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #8e24aa; /* Same hover effect as edit button */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card-Detail {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .post-content {
+    font-size: 0.9rem;
+  }
+
+  .post-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn, .delete-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-title {
+    font-size: 1.2rem;
+  }
+
+  .post-content {
+    font-size: 0.8rem;
+  }
+}
